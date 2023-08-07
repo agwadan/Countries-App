@@ -7,6 +7,7 @@ function App() {
   const [countries, setCountries] = useState([]);
   const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState('');
+  const [region, setRegion] = useState('');
 
   useEffect(() => {
     const getCountries = async () => {
@@ -21,9 +22,19 @@ function App() {
 
   return (
     <>
-      <Header search={search} setSearch={setSearch}/>
+      <Header
+        search={search}
+        setSearch={setSearch}
+        region={region}
+        setRegion={setRegion}
+      />
       {loading ? <p>Loading...</p> :
-      <Countries countries={countries} search={search} />}
+      
+      <Countries
+        countries={countries}
+        search={search}
+        region={region}
+      />}
     </>
   )
 }

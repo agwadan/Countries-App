@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import Country from './country';
 
-const Countries = ({countries, search}) => {
+const Countries = ({countries, search, region}) => {
 
-const filteredCountries = countries.filter(country => country.name.common.toLowerCase().includes(search.toLowerCase()))
+const filteredCountries = countries.filter(country => country.name.common.toLowerCase().includes(search.toLowerCase()) &&
+(region ? country.region === region : true))
 
   return (
     <>
