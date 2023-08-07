@@ -65,7 +65,7 @@ button:focus-visible {
 
 .countries{
   display: flex;
-  flex-wrap:wrap ;
+  flex-wrap: wrap;
 }
 
 @media (prefers-color-scheme: light) {

@@ -1,8 +1,16 @@
 import React from 'react';
 
-const Header = () => {
+const Header = ({search, setSearch}) => {
   return (
-    <div>Header</div>
+    <div>
+    <h1>Countries</h1>
+    <input
+      type="text"
+      placeholder="Search for a country..."
+      value={search}
+      onChange={e => setSearch(e.target.value)}
+    />
+  </div>
   )
 }
 
