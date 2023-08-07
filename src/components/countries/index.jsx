@@ -1,15 +1,17 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState , useContext} from 'react';
 import Country from './country';
+import ThemeContext from '../../theme-context';
 
 const Countries = ({countries, search, region}) => {
 
+const { theme } = useContext(ThemeContext);
 const filteredCountries = countries.filter(country => country.name.common.toLowerCase().includes(search.toLowerCase()) &&
 (region ? country.region === region : true))
 
   return (
     <>
       <h1>Countries</h1>
-      <div className="countries">
+      <div className={`countries ${theme}`}>
         {filteredCountries.map(country => {
           return <Country
           key={country.name.common}

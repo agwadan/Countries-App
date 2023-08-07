@@ -1,9 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import ThemeContext from '../../theme-context';
+
 
 const Header = ({ search, setSearch, region, setRegion }) => {
+  const { theme, toggleTheme } = useContext(ThemeContext);
+
   const regions = ['Africa', 'Americas', 'Asia', 'Europe', 'Oceania'];
+  
   return (
-    <div>
+    <div className={theme}>
     <h1>Countries</h1>
     <input
       type="text"
@@ -20,6 +25,10 @@ const Header = ({ search, setSearch, region, setRegion }) => {
           ))
         }
       </select>
+
+      <button onClick={toggleTheme}>
+        Toggle to {theme === 'light' ? 'Dark' : 'Light'} Mode
+      </button>
   </div>
   )
 }

@@ -68,6 +68,16 @@ button:focus-visible {
   flex-wrap: wrap;
 }
 
+.light {
+  background-color: white;
+  color: black;
+}
+
+.dark {
+  background-color: black;
+  color: white;
+}
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;

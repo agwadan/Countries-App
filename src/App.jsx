@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
-import Header from './components/header'
-import Countries from './components/countries'
+import Header from './components/header';
+import Countries from './components/countries';
+import ThemeProvider from './theme-provider';
 
 function App() {
 
@@ -21,7 +22,7 @@ function App() {
   }, []);
 
   return (
-    <>
+    <ThemeProvider>
       <Header
         search={search}
         setSearch={setSearch}
@@ -35,7 +36,7 @@ function App() {
         search={search}
         region={region}
       />}
-    </>
+    </ThemeProvider>
   )
 }
 
