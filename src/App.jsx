@@ -14,7 +14,7 @@ function App() {
 
   useEffect(() => {
     const getCountries = async () => {
-      const res = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital');
+      const res = await fetch('https://restcountries.com/v3.1/all?fields=name,flags,population,region,capital', {mode: 'cors'});
       const fetchedCountries = await res.json();
       console.log(fetchedCountries);
       setCountries(fetchedCountries);
