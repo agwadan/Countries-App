@@ -6,12 +6,21 @@
   padding: 2rem 8rem;
 }
 
-header {
-  
-}
-
 header .top-row{
   border-bottom: 2px solid rgb(230, 230, 230);
+}
+
+header.dark .top-row{
+  background: #2f2f2f;
+  border-bottom: none;
+}
+
+header.dark input,
+header.dark button,
+header.dark select{
+  background: #2f2f2f;
+  border: 2px solid #434343;
+  color: #fff;
 }
 
 .bottom-row{

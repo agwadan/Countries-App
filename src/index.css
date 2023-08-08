@@ -88,7 +88,15 @@ button:hover {
   background-color: #f6f6f6;
 }
 
-.dark {
+.dark,
+.dark a {
   background-color: #242424;
   color: white;
 }
+
+.dark .country{
+  border: 1px solid #494949;
+  background: #2e2e2e;
+}
+
+
