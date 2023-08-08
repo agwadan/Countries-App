@@ -1,6 +1,8 @@
 import { useState, useEffect } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Header from './components/header';
 import Countries from './components/countries';
+import CountryDetails from './components/countries/countryDetails';
 import ThemeProvider from './theme-provider';
 
 function App() {
@@ -29,13 +31,12 @@ function App() {
         region={region}
         setRegion={setRegion}
       />
-      {loading ? <p>Loading...</p> :
-      
-      <Countries
-        countries={countries}
-        search={search}
-        region={region}
-      />}
+      <Router>
+        <Routes>
+          <Route path="/" element={<Countries countries={countries} search={search} region={region} loading={loading} />} />
+          <Route path="/country/:name" element={<CountryDetails />} />
+        </Routes>
+      </Router>
     </ThemeProvider>
   )
 }
