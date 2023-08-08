@@ -1,0 +1,24 @@
+.flex-row{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-bottom: 4rem;
+  padding: 2rem 8rem;
+}
+
+header {
+  
+}
+
+header .top-row{
+  border-bottom: 2px solid rgb(230, 230, 230);
+}
+
+header.light .bottom-row{
+  background-color:  #f6f6f6;
+}
+
+ header input, select {
+  padding: 10px;
+  font-size: 1em;
+}
