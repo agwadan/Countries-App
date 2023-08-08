@@ -9,7 +9,7 @@ const Header = ({ search, setSearch, region, setRegion }) => {
   
   return (
     <div className={theme}>
-    <h1>Countries</h1>
+    <h1>Where in the world?</h1>
     <input
       type="text"
       placeholder="Search for a country..."

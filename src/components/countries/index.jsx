@@ -10,7 +10,6 @@ const filteredCountries = countries.filter(country => country.name.common.toLowe
 
   return (
     <>
-      <h1>Countries</h1>
       <div className={`countries ${theme}`}>
         {filteredCountries.map(country => {
           return <Country
