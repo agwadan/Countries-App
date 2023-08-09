@@ -31,7 +31,7 @@ function App() {
         region={region}
         setRegion={setRegion}
       />
-      <Router>
+      <Router basename="/Countries-App">
         <Routes>
           <Route path="/" element={<Countries countries={countries} search={search} region={region} loading={loading} />} />
           <Route path="/country/:name" element={<CountryDetails />} />
