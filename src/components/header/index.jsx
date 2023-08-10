@@ -14,7 +14,7 @@ const Header = ({ search, setSearch, region, setRegion }) => {
       <div className="top-row flex-row">
         <h1>Where in the world?</h1>
         <button onClick={toggleTheme}>
-          <img src={ theme === 'light' ? Moon : Sun} /> {theme === 'light' ? 'Turn off the ' : 'Turn on the '} lights
+          <img src={ theme === 'light' ? Moon : Sun} alt='theme-icon'/> {theme === 'light' ? 'Turn off the ' : 'Turn on the '} lights
       </button>
       </div>
 

@@ -15,18 +15,18 @@ const Country = ({ name, flag, region, population, capital }) => {
   return (
     <div className='country'>
       <Link to={`/country/${name}`}>
-        <img src={flag} />
+        <img src={flag} alt={`Flag of ${name}`} />
         <h3><strong>Name:&nbsp;</strong> {name}</h3>
         <div className="item">
-          <img src={theme == 'light' ? PopulationDark : PopulationLight}/>
+          <img src={theme === 'light' ? PopulationDark : PopulationLight} alt='population-icon'/>
           <p><strong>Population:&nbsp; </strong> <i>{population.toLocaleString('en-US')}</i></p>
         </div>
         <div className="item">
-        <img src={theme == 'light' ? RegionDark : RegionLight}/>
+        <img src={theme === 'light' ? RegionDark : RegionLight} alt='region-icon'/>
         <p><strong>Region:&nbsp;</strong> <i>{region}</i></p>
         </div>
         <div className="item">
-        <img src={theme == 'light' ? CapitalDark : CapitalLight}/>
+        <img src={theme === 'light' ? CapitalDark : CapitalLight} alt='capital-icon'/>
         <p><strong>Capital:&nbsp;</strong> <i>{capital}</i></p>
         </div>
       </Link>
