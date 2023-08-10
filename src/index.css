@@ -17,7 +17,7 @@ h1 {
 
 a {
   text-decoration: none;
-  color: #242424;
+  color: #122a66;
 }
 
 .countries {
@@ -51,9 +51,10 @@ a {
   object-fit: cover;
 }
 
-.country h3, .country p {
+.country h3, 
+.country p {
   margin: 0;
-  padding: 15px;
+  padding: 10px 15px;
 }
 
 .country h3 {
