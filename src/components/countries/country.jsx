@@ -1,25 +1,32 @@
-import React from 'react';
+import React , {useContext} from 'react';
 import { Link } from 'react-router-dom';
 import PopulationDark from '../../assets/population-dark.svg';
-import Region from '../../assets/region.svg';
-import Capital from '../../assets/capital.svg';
+import PopulationLight from '../../assets/population-light.svg';
+import RegionDark from '../../assets/region-dark.svg';
+import RegionLight from '../../assets/region-light.svg';
+import CapitalDark from '../../assets/capital-dark.svg';
+import CapitalLight from '../../assets/capital-light.svg';
+import ThemeContext from '../../theme-context';
 
-const Country = ({name, flag, region, population, capital}) => {
+const Country = ({ name, flag, region, population, capital }) => {
+  
+  const { theme } = useContext(ThemeContext);
+
   return (
     <div className='country'>
       <Link to={`/country/${name}`}>
         <img src={flag} />
         <h3><strong>Name:&nbsp;</strong> {name}</h3>
         <div className="item">
-          <img src={PopulationDark}/>
+          <img src={theme == 'light' ? PopulationDark : PopulationLight}/>
           <p><strong>Population:&nbsp; </strong> <i>{population.toLocaleString('en-US')}</i></p>
         </div>
         <div className="item">
-        <img src={Region}/>
+        <img src={theme == 'light' ? RegionDark : RegionLight}/>
         <p><strong>Region:&nbsp;</strong> <i>{region}</i></p>
         </div>
         <div className="item">
-        <img src={Capital}/>
+        <img src={theme == 'light' ? CapitalDark : CapitalLight}/>
         <p><strong>Capital:&nbsp;</strong> <i>{capital}</i></p>
         </div>
       </Link>
